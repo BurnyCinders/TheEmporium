@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Me-theusTheMethane-ous</title>
+  <style>
+    input {
+      text-align: center;
+      outline: none;
+      border: none box-shadow: 0px 0px #888888;
+      /* border: 4px inset blanchedAlmond; */
+      border-radius: 10%;
+      opacity: 0.4;
+      /* background: black; */
+      color: grey;
+    }
+
+    .goldenground {
+      opacity: 0.4;
+      color: darkGrey;
+      background: rgb(255, 255, 255);
+    }
+
+    .goldenground:hover {
+      opacity: 0.8;
+      box-shadow:
+        0 0 60px 1px #fff,
+        0 0 100px 2px rgb(255, 204, 0),
+        0 0 140px 3px rgb(255, 255, 255);
+    }
+    .goldenground:focus {
+      opacity: 1;
+      box-shadow:
+        0 0 60px 1px #fff,
+        0 0 100px 2px rgb(255, 204, 0),
+        0 0 140px 3px rgb(255, 255, 255);
+    }
+
+    label {
+      color: white;
+      text-shadow: 0.5px 0.5px  rgb(255, 255, 179);
+    }
+
+    table {
+      opacity: 0.7;
+      transition: all 0.3s ease-in-out;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    table:hover {
+      transform: scale(1.02);
+      box-shadow:
+        0 0 60px 2px rgb(255,255,255),
+        0 0 100px 4px rgb(255, 204, 0);
+      opacity: 0.9;
+    } 
+  </style>
+</head>
+
+<body
+  style="background-image: url('file:///C:/Users/AdamAbrahams.AzureAD/OneDrive - Quantexa Ltd/Documents/PersonalProjects/WebDevelopment/HTML - Personal Site/images/175-1752789_mount-olympus-greek-mythology-mount-olympus.jpg');background-repeat:no-repeat;background-attachment:fixed;background-size:cover;">
+  <!-- <body style="background-color: #cccccc"> -->
+  <h1 style="text-align:center">About pro-<strong style="color:red">ME</strong>-theus</h1>
+  <img src="images/before_after2.jpg" alt="digitalPrometheus" style="vertical-align:top;float:right;width:120px;height:170px; padding-right: 50px;">
+  <p style="color:powderBlue">I am presbetarian, drive a delorean and smoke plastic strawium</p>
+  <br>
+  <p>
+    <br>
+  <h2 style="color:powderBlue;padding-left:1%;">About <strong style="color:blue">YOU</strong>-ranus</h2>
+  <form action="mailto:bart_222@hotmail.co.uk" method="post" enctype="text/plain">
+    <div style="padding-left: 1%;">
+      <table style="background:rgba(0,0,0,0.3);">
+        <tr>
+          <td>
+            <label for="">Your Name:</label>
+          </td>
+          <td>
+            <input type="text" name="yourName" value="" class="goldenground">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="">Email</label>
+          </td>
+          <td>
+            <input type="email" name="yourEmail" value="" class="goldenground">
+          </td>
+        </tr>
+        <tr>
+          <td><label for="">Birthday</label></td>
+          <td><input type="date" name="dob" value="" id="" class="goldenground"></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="">Favourite Colour</label>
+          </td>
+          <td>
+            <input type="color" name="faveColour" value="">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="">Do you smell?</label>
+          </td>
+          <td>
+            <input type="checkbox" name="doYaSmell?" value="" class="black">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="">Password:</label>
+          </td>
+          <td>
+            <input type="password" name="wosYaPassword?" value="" class="goldenground">
+          </td>
+        </tr>
+        <tr>
+          <td><input type="file" name="someKindafyle" class="goldenground"></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="">How Many years do you have left?</label>
+          </td>
+          <td>
+            <input type="range" name="yearsLeft" value="" min="0" max="23" list="tickmarks" onchange="updateTextInput(this.value);">
+            <datalist id="tickmarks">
+              <option value="1" label="0%"></option>
+              <option value="3"></option>
+              <option value="6"></option>
+              <option value="9"></option>
+              <option value="12"></option>
+              <option value="15" label="50%"></option>
+              <option value="18"></option>
+              <option value="21"></option>
+              <option value="23" label="100%"></option>
+            </datalist>
+            <input type="text" name="yearsLeftText" id="textInput" value="" class="goldenground" style="width:30px;">
+          </td>
+        </tr>
+        <tr>
+          <td><label for="">Toggle Flames</label></td>
+          <td><input type="radio" names="flamesOn?" value="" class="goldenground"></td>
+        </tr>
+        <tr>
+          <td><label for="">Write your eulogy</label></td>
+          <td><textarea name="youLodgy" value="" cols="30" rows="10" class="goldenground" style="border:6px ridge Grey;border-radius:6%;"></textarea></td>
+        </tr>
+        <tr>
+
+        </tr>
+      </table>
+    </div>
+    <script>
+      function updateTextInput(val) {
+        document.getElementById('textInput').value = val;
+      }
+    </script>
+    <!-- text, submit, file, date, radio, range  -->
+    <div style="padding-left:5%">
+      <input type="submit" name="">
+    </div>
+  </form>
+  <p style="text-align:center;font-family:verdana;font-size:110px"><a href="index.html">Back to The Emporium</a></p>
+
+</body>
+
+</html>
