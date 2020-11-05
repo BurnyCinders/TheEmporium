@@ -5,6 +5,13 @@
   <style>
     * {
       box-sizing: border-box;
+      font-family: backslash
+    }
+
+    body,
+    html {
+      margin: 0;
+      padding: 0;
     }
 
     table {
@@ -23,14 +30,19 @@
 
     h1 {
       color: white;
+      font-family: bismilah, helvetica;
+      font-size: 400%;
     }
 
     h2 {
       color: white;
+      font-family: sketsa, helvetica;
+      font-size: 200%;
     }
 
     h3 {
       color: white;
+      font-family: death-crow, helvetica;
     }
 
     li {
@@ -41,40 +53,19 @@
       color: white;
     }
 
-    .centerpiece {
-      transition: all 1.2s ease-in-out;
-      display: block;
-      border-radius: 50%;
-      margin-left: auto;
-      /*used to center*/
-      margin-right: auto;
-      /*used to center*/
-      width: 200;
-      height: 200;
+    img {
+      width: 33vw;
+      height: 20vh;
+      opacity: 0.3;
     }
 
-    .centerpiece:hover {
-      outline: none;
-      box-shadow:
-        0 0 60px 10px #fff,
-        /* inner white */
-        0 0 100px 20px #f0f,
-        /* middle magenta */
-        0 0 140px 30px #0ff;
-      /* outer cyan */
-    }
-
-    .centerpiece:focus {
-      transform: scale(3.5);
-      opacity: 0%;
-      outline: none;
+    img:hover {
+      opacity: 0.8;
     }
 
     #welcomeDiv {
       font-size: 160%;
-      font-family: "Times New Roman", Times, serif;
-      ;
-      text-shadow: 2px 2px #ff0000;
+      font-family: death-crow, Times, serif;
       display: none;
       z-index: -1;
       position: absolute;
@@ -92,12 +83,118 @@
       z-index: -99;
     }
 
+    #pictureButtons {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      min-width: 30%;
+      min-height: 30%;
+      z-index: -99;
+    }
+
     #pictureDiv {
       opacity: 20%
     }
 
     #pictureDiv:hover {
       opacity: 100%
+    }
+
+
+    #banner {
+      width: 100%;
+      position: fixed;
+      background-color: black;
+      top: 0;
+      z-index: 99;
+    }
+
+    #sideBanner {
+      height: 100%;
+      opacity: 0.7;
+      width: 8vw;
+      position: fixed;
+      z-index: 89;
+      top: 0;
+      left: 0;
+      background-color: black;
+      word-wrap: break-word;
+      /* overflow-x: hidden; */
+      padding-top: 15vh;
+
+    }
+
+    #inline {
+      display: inline-block;
+      width: 32vw;
+      height: 5vh;
+    }
+
+    .centerpiece {
+      transition: all 1.2s ease-in-out;
+      display: block;
+      border-radius: 50%;
+      padding-top: 7%;
+      margin-left: auto;
+      /*used to center*/
+      margin-right: auto;
+      /*used to center*/
+      width: 30%;
+      height: 30%;
+    }
+
+    .centerpiece:hover {
+      outline: none;
+      transform: scale(1.2);
+
+    }
+
+    .centerpiece:focus {
+      transform: scale(0);
+      box-shadow:
+        0 0 60px 10px #fff,
+        /* inner white */
+        0 0 100px 20px #f0f,
+        /* middle magenta */
+        0 0 140px 30px #0ff;
+      /* outer cyan */
+      outline: none;
+    }
+
+    .buttonDiv {
+      transition: all 1.2s ease-in-out;
+      opacity: 0.07;
+    }
+
+    .buttonDiv:hover {
+      opacity: 0.7;
+    }
+
+    .main {
+      margin-top: 5vh;
+      margin-left: 8vw;
+      /* Same as the width of the sidenav */
+      padding: 0vw 1vw;
+    }
+
+    @font-face {
+      font-family: bismilah;
+      src: url(fonts/Bismillahscript-4ByyY.woff);
+    }
+
+    @font-face {
+      font-family: death-crow;
+      src: url(fonts/DeathCrowRegular-dBqx.woff);
+    }
+
+    @font-face {
+      font-family: sketsa;
+      src: url(fonts/Sketsaramadhan-nRLAO.woff);
+    }
+
+    @font-face {
+      font-family: backslash;
+      src: url(fonts/Backslash-RpJol.woff);
     }
   </style>
   <meta charset="utf-8">
@@ -107,105 +204,117 @@
 
 <body style="background-color:black">
 
-  <!-- <body style="background-image: url('file:///C:/Users/AdamAbrahams.AzureAD/OneDrive - Quantexa Ltd/Documents/PersonalProjects/WebDevelopment/HTML - Personal Site/images/fire.jpeg');background-repeat: no-repeat;background-attachment: fixed;background-size:cover;"> -->
-<!-- BACKGROUND VIDEO -->
+  <!-- BACKGROUND VIDEO -->
   <video autoplay muted loop id="myVideo">
     <source src="videos/out.mp4" type="video/mp4">
     Your browser does not support HTML5 video.
   </video>
 
-<!-- TOP PICTURES -->
-  <table>
-    <tr>
-      <td id="pictureDiv"><img src="images/download.jpg" alt="BurningLibraryOfAlexandria" width=100% height="250"></td>
-      <td id="pictureDiv"><img src="images/PageOnFire.jpg" alt="PageOfFire" width=100% height="250"></td>
-      <td id="pictureDiv"><img src="images/library-of-alexandria-about.jpg" alt="BurningLibraryOfAlexandria2" width=100% height="250"></td>
-    </tr>
-  </table>
 
-<!-- HEADING -->
-  <h1 style="text-align:center">Welcome to the Emporium</h1>
+  <!-- TOP BAR -->
+  <div id="banner">
 
-<!-- CENTERPIECE TRIGGERING DIV TEXT APPEARENCE -->
-  <input type="image" src="images/circle-cropped.png" class="centerpiece" alt="showDiv" onclick="showDiv()" />
+    <div id="inline" class="buttonDiv" style="vertical-align:190%;text-align: center;">
+      <h2>Auditorium Curators Ledger</h2>
+      <!-- <img src="images/download.jpg" alt="BurningLibraryOfAlexandria"> -->
+    </div>
+    <div id="inline" style="vertical-align:190%;text-align: center;">
+      <!-- <p style="text-align:center;justify-content: center;line-height:90px;">Welcome to the Emporium</h1> -->
+      <h1 style="width:31vw;">Welcome to the Emporium</h1>
+    </div>
+    <div id="inline" class="buttonDiv" style="vertical-align:190%;text-align: center;">
+      <h2>Sanitorium Dredger</h2>
+      <!-- <img src="images/library-of-alexandria-about.jpg" alt="BurningLibraryOfAlexandria2" > -->
+    </div>
 
-  <div id="welcomeDiv" class="answer_list" style"color:white"> WELCOME MY CHILD</div>
+  </div>
+  <div class="main">
 
-  <script>
-    function showDiv() {
-      document.getElementById('welcomeDiv').style.display = "block";
-    }
-  </script>
+    <!-- SIDE BAR -->
+  </div>
+  <div id="sideBanner">
+    <!-- style="max-width:1vw;" -->
+    <a href="aboutMe.html"><h2 class="buttonDiv">The Memorium</h2></a>
+    <a href="contactDetails.html"><h2 class="buttonDiv">The Praetorium</h2></a>
+    <a href="https://www.london-fire.gov.uk/"><h2 class="buttonDiv">The Natatorium</h2></a>
+  </div>
 
-  <p>This <em>memorium</em> is a <strong>compendium</strong> of all old <mark>emporiums</mark> sent to the <ins>Crematorium</ins></p>
 
-<!-- LINKS -->
-  <a href="aboutMe.html">all about me</a>
-  <br>
-  <a href="contactDetails.html">contact me</a>
-  <p>If your house is on fire, please seek help <a href="https://www.london-fire.gov.uk/" target="blank"><strong>here</strong></a></p>
-  <hr>
+  <!-- CENTERPIECE TRIGGERING DIV TEXT APPEARENCE -->
+  <input type="image" src="images/ostentorium3.png" class="centerpiece" alt="showDiv" onclick="showDiv()" />
+  <div class="main">
+    <div id="welcomeDiv" class="answer_list" style"color:white"> WELCOME MY CHILD</div>
 
-  <!-- TABLES -->
-  <h3 style="text-align:center">Fan fiction</h3>
-  <ul>
-    <li>Books on shops on fire</li>
-    <ol type="i">
-      <li>Farenheight 451</li>
-      <li>catch 22 fireballs otherwise you'll set fire to the kitchen</li>
-    </ol>
-    <li>Fires of books on shops</li>
-    <ol type="i" start="3">
-      <li><a href="https://encyclopedia.ushmm.org/content/en/article/book-burning">German campfires </a><i>circa</i> 1933-1945</li>
-      <li><a href="https://www.biblegateway.com/passage/?search=Exodus%203&version=NIV">Moses and the burning bookstore</a></li>
-      <li><a href="https://visitcanberra.com.au/attractions/56b23af9d270154b4553bd6c/national-library-of-australia">The national Library of Cambra</a></li>
-    </ol>
-  </ul>
+    <script>
+      function showDiv() {
+        document.getElementById('welcomeDiv').style.display = "block";
+      }
+    </script>
 
-  <hr>
-  <h3 style="text-align:center">Work Experience</h3>
-  <table border="0">
-    <thead>
-      <td>
-        <table>
-          <th style="text-align:left;">
-            <!-- table header cell-->
-            Date
-          </th>
-          <th style="text-align:left;">Experience</th>
-    </thead>
-    <tr>
-      <!-- table row -->
-      <td>
-        <!-- table data -->
-        16th April 1994
-      </td>
-      <td>got BORN fam</td>
-    </tr>
-    <tr>
-      <td>
-        16th April 1995
-      </td>
-      <td>got WUN fam</td>
-    </tr>
-  </table>
-  </td>
-  <td>
-    <table>
-      <th style="text-align:left;">Heating Type</th>
-      <th style="text-align:left;">Rating</th>
+    <p>This <em>memorium</em> is a <strong>compendium</strong> of all old <mark>emporiums</mark> sent to the <ins>Crematorium</ins></p>
+
+<hr>
+    <!-- TABLES -->
+    <h3 style="text-align:center">Fan fiction</h3>
+    <ul>
+      <li>Books on shops on fire</li>
+      <ol type="i">
+        <li>Farenheight 451</li>
+        <li>catch 22 fireballs otherwise you'll set fire to the kitchen</li>
+      </ol>
+      <li>Fires of books on shops</li>
+      <ol type="i" start="3">
+        <li><a href="https://encyclopedia.ushmm.org/content/en/article/book-burning">German campfires </a><i>circa</i> 1933-1945</li>
+        <li><a href="https://www.biblegateway.com/passage/?search=Exodus%203&version=NIV">Moses and the burning bookstore</a></li>
+        <li><a href="https://visitcanberra.com.au/attractions/56b23af9d270154b4553bd6c/national-library-of-australia">The national Library of Cambra</a></li>
+      </ol>
+    </ul>
+
+    <hr>
+    <h3 style="text-align:center">Work Experience</h3>
+    <table border="0">
+      <thead>
+        <td>
+          <table>
+            <th style="text-align:left;">
+              <!-- table header cell-->
+              Date
+            </th>
+            <th style="text-align:left;">Experience</th>
+      </thead>
       <tr>
-        <td>stepping on a bunsen Burner</td>
-        <td>⭐⭐⭐</td>
+        <!-- table row -->
+        <td>
+          <!-- table data -->
+          16th April 1994
+        </td>
+        <td>got BORN fam</td>
       </tr>
       <tr>
-        <td>drinking builing oil</td>
-        <td>⭐⭐⭐⭐⭐</td>
+        <td>
+          16th April 1995
+        </td>
+        <td>got WUN fam</td>
       </tr>
     </table>
-  </td>
-  </table>
+    </td>
+    <td>
+      <table>
+        <th style="text-align:left;">Heating Type</th>
+        <th style="text-align:left;">Rating</th>
+        <tr>
+          <td>stepping on a bunsen Burner</td>
+          <td>⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td>drinking builing oil</td>
+          <td>⭐⭐⭐⭐⭐</td>
+        </tr>
+      </table>
+    </td>
+    </table>
 
+  </div>
 
 </body>
 
