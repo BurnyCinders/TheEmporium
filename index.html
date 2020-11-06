@@ -4,8 +4,8 @@
 <head>
   <style>
     * {
-      box-sizing: border-box;
-      font-family: backslash
+      /* box-sizing: border-box; */
+      font-family: backslash;
     }
 
     body,
@@ -31,13 +31,13 @@
     h1 {
       color: white;
       font-family: bismilah, helvetica;
-      font-size: 4vw;
+      font-size: 5vw;
     }
 
     h2 {
       color: white;
       font-family: sketsa, helvetica;
-      font-size: 200%;
+      font-size: 2.3vw;
     }
 
     h3 {
@@ -50,8 +50,10 @@
     }
 
     p {
+      text-align: right;
       color: white;
     }
+
 
     img {
       width: 33vw;
@@ -83,33 +85,15 @@
       z-index: -99;
     }
 
-    #pictureButtons {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      min-width: 30%;
-      min-height: 30%;
-      z-index: -99;
-    }
-
-    #pictureDiv {
-      opacity: 20%
-    }
-
-    #pictureDiv:hover {
-      opacity: 100%
-    }
-
-
     #banner {
-      width: 100%;
-      /* margin-left: 8.7%; */
-      /* margin-right: 8.7%; */
-      max-height: 5vw;
+      /* margin-left: 8vw; */
+      /* margin-right: 8vw; */
+      max-height: 18vh;
       position: absolute;
       background-color: black;
       top: 0;
       z-index: 99;
+      overflow: hidden;
     }
 
     #sideBanner {
@@ -119,17 +103,23 @@
       position: fixed;
       z-index: 89;
       top: 0;
-      left: 0;
       background-color: black;
       word-wrap: break-word;
       /* overflow-x: hidden; */
       padding-top: 15vh;
+    }
 
+    #sideBanner.right {
+      right: 0;
+    }
+
+    #sideBanner.left {
+      left: 0;
     }
 
     #inline {
       display: inline-block;
-      width: 32vw;
+      width: 27.6vw;
       /* height: 5vh; */
       max-height: 5vw;
     }
@@ -174,11 +164,16 @@
       opacity: 0.7;
     }
 
+    .right {
+      text-align: right
+    }
+
     .main {
       margin-top: 5vh;
       margin-left: 8vw;
+      margin-right: 8vw;
       /* Same as the width of the sidenav */
-      padding: 0vw 1vw;
+      padding: 0vh 0.6vw;
     }
 
     @font-face {
@@ -215,29 +210,52 @@
   </video>
 
   <!-- SIDE BAR -->
-</div>
-<div id="sideBanner">
-  <!-- style="max-width:1vw;" -->
-  <a href="aboutMe.html"><h2 class="buttonDiv">The Memorium</h2></a>
-  <a href="contactDetails.html"><h2 class="buttonDiv">The Praetorium</h2></a>
-  <a href="https://www.london-fire.gov.uk/"><h2 class="buttonDiv">The Natatorium</h2></a>
-</div>
+  </div>
+  <div id="sideBanner" class="left">
+    <!-- style="max-width:1vw;" -->
+    <a href="aboutMe.html">
+      <h2 class="buttonDiv">The Memorium</h2>
+    </a>
+    <a href="contactDetails.html">
+      <h2 class="buttonDiv">The Praetorium</h2>
+    </a>
+    <a href="https://www.london-fire.gov.uk/" target="_blank">
+      <h2 class="buttonDiv">The Natatorium</h2>
+    </a>
+  </div>
+
+  <div id="sideBanner" class="right">
+    <!-- style="max-width:1vw;" -->
+    <a href="aboutMe.html">
+      <h2 class="buttonDiv">The cēnsōrium</h2>
+    </a>
+    <a href="contactDetails.html">
+      <h2 class="buttonDiv">The Praetorium</h2>
+    </a>
+    <a href="https://www.london-fire.gov.uk/" target="_blank">
+      <h2 class="buttonDiv">The Natatorium</h2>
+    </a>
+  </div>
+
   <div class="main">
-  <!-- TOP BAR -->
-  <div id="banner">
+    <!-- TOP BAR -->
+    <div id="banner">
 
-    <div id="inline" class="buttonDiv" style="vertical-align:190%;text-align: center;">
-      <h2>Auditorium Curators Ledger</h2>
-      <!-- <img src="images/download.jpg" alt="BurningLibraryOfAlexandria"> -->
+      <div id="inline" class="buttonDiv" style="text-align: center;">
+        <h2>Auditorium Curators Ledger</h2>
+        <!-- <img src="images/download.jpg" alt="BurningLibraryOfAlexandria"> -->
+      </div>
+      <!-- vertical-align:190%; -->
+      <div id="inline" style="text-align: center;">
+        <!-- <p style="text-align:center;justify-content: center;line-height:90px;">Welcome to the Emporium</h1> -->
+        <h1 style="width:27.6vw;">The Emporium</h1>
+      </div>
+      <div id="inline" class="buttonDiv" style="text-align: center;">
+        <h2>Sanitorium Dredger</h2>
+        <!-- <img src="images/library-of-alexandria-about.jpg" alt="BurningLibraryOfAlexandria2" > -->
+      </div>
+
     </div>
-    <div id="inline" style="vertical-align:190%;text-align: center;">
-      <!-- <p style="text-align:center;justify-content: center;line-height:90px;">Welcome to the Emporium</h1> -->
-      <h1 style="width:31vw;">Welcome to the Emporium</h1>
-    </div>
-    <div id="inline" class="buttonDiv" style="vertical-align:190%;text-align: center;">
-      <h2>Sanitorium Dredger</h2>
-      <!-- <img src="images/library-of-alexandria-about.jpg" alt="BurningLibraryOfAlexandria2" > -->
-    </div>
 
 
 
@@ -245,8 +263,8 @@
 
 
 
-  <!-- CENTERPIECE TRIGGERING DIV TEXT APPEARENCE -->
-  <input type="image" src="images/ostentorium3.png" class="centerpiece" alt="showDiv" onclick="showDiv()" />
+    <!-- CENTERPIECE TRIGGERING DIV TEXT APPEARENCE -->
+    <input type="image" src="images/ostentorium3.png" class="centerpiece" alt="showDiv" onclick="showDiv()" />
     <div id="welcomeDiv" class="answer_list" style"color:white"> WELCOME MY CHILD</div>
 
     <script>
@@ -255,24 +273,30 @@
       }
     </script>
 
+<br>
+<br>
     <p>This <em>memorium</em> is a <strong>compendium</strong> of all old <mark>emporiums</mark> sent to the <ins>Crematorium</ins></p>
 
-<hr>
+    <hr>
     <!-- TABLES -->
     <h3 style="text-align:center">Fan fiction</h3>
-    <ul>
-      <li>Books on shops on fire</li>
-      <ol type="i">
-        <li>Farenheight 451</li>
-        <li>catch 22 fireballs otherwise you'll set fire to the kitchen</li>
-      </ol>
-      <li>Fires of books on shops</li>
-      <ol type="i" start="3">
-        <li><a href="https://encyclopedia.ushmm.org/content/en/article/book-burning">German campfires </a><i>circa</i> 1933-1945</li>
-        <li><a href="https://www.biblegateway.com/passage/?search=Exodus%203&version=NIV">Moses and the burning bookstore</a></li>
-        <li><a href="https://visitcanberra.com.au/attractions/56b23af9d270154b4553bd6c/national-library-of-australia">The national Library of Cambra</a></li>
-      </ol>
-    </ul>
+    <!-- <div dir="rtl"> -->
+<div style="padding-left: 40vw;">
+
+      <ul class="">
+        <li>Books on shops on fire</li>
+        <ol type="i">
+          <li>Farenheight 451</li>
+          <li>catch 22 fireballs otherwise you'll set fire to the kitchen</li>
+        </ol>
+        <li>Fires of books on shops</li>
+        <ol type="i" start="3">
+          <li><a href="https://encyclopedia.ushmm.org/content/en/article/book-burning">German campfires </a><i>circa</i> 1933-1945</li>
+          <li><a href="https://www.biblegateway.com/passage/?search=Exodus%203&version=NIV">Moses and the burning bookstore</a></li>
+          <li><a href="https://visitcanberra.com.au/attractions/56b23af9d270154b4553bd6c/national-library-of-australia">The national Library of Cambra</a></li>
+        </ol>
+      </ul>
+    </div>
 
     <hr>
     <h3 style="text-align:center">Work Experience</h3>
