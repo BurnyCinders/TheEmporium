@@ -1,0 +1,129 @@
+
+#tetrisGrid {
+  width: 220px;
+  height: 440px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffffba ;
+  border: #ffffba ;
+}
+
+
+#tetrisGrid div {
+  text-align: center;
+  transition: 0.6s;
+  border-width: 2px;
+  height: 20px;
+  width: 20px;
+  border-left-style: solid;
+  border-top-style: solid;
+  border-left-color: inherit;
+  border-top-color: inherit;
+}
+
+#nextTetriminoDisplay {
+  background-color: #ffffba;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 1vw;
+  width: 120px;
+  height: 120px;
+}
+
+#nextTetriminoDisplay div{
+  border-width: 2px;
+  border: #ecd5e3 ;
+  width: 20px;
+  height: 20px;
+}
+
+#container {
+  display: flex;
+}
+
+
+#TETRISBUTTON {
+  transition: all 1.2s ease-in-out;
+  height: 20vw;
+  width: 20vw;
+
+}
+#TETRISBUTTON:hover {
+  transform: scale(1.1);
+  box-shadow:
+  0 0 30px 10px #fff,
+  /* inner white */
+  0 0 50px 20px #f0f,
+  /* middle magenta */
+  0 0 70px 30px #0ff;
+}
+
+#TETRISBUTTON:active {
+  transform: scale(0.9);
+
+}
+
+
+.tetrisButtonContainer {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+
+}
+
+.TETRISCONTAINER {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+
+}
+
+.tetrimino {
+  border-radius: 20%;
+  border-width:2px;
+  /* border-left-style: solid;
+  border-top-style: solid;
+  border-left-color: black;
+  border-top-color: grey; */
+}
+
+.redTetrimino {
+  background:  #ff8b94;
+  box-shadow: 0 0 2px 1px  white;
+}
+
+.orangeTetrimino {
+  background: #ffaaa5;
+  box-shadow: 0 0 2px 1px  white;
+}
+
+.blueTetrimino {
+  background: #a8e6cf;
+  box-shadow: 0 0 2px 1px  white;
+}
+
+.greenTetrimino {
+  background: #ccffcc;
+  box-shadow: 0 0 2px 1px  white;
+}
+
+.purpleTetrimino {
+  background: #ffd3b6;
+  box-shadow: 0 0 2px 1px  white;
+}
+
+
+.selectedLetter{
+  box-shadow:
+  0 0 3px 1px #fff,
+  /* inner white */
+  0 0 5px 2px #f0f,
+  /* middle magenta */
+  0 0 7px 3px #0ff;
+}

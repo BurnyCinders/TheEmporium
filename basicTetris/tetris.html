@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <script src="app.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Tetris</title>
+</head>
+
+<body>
+  
+  <audio id="introMusic" src="music/SOME_MOTHERS_DO_HAVE_EM_THEME_INTRO.mp3" loop></audio>
+  <audio id="playMusic" src="music/Wallace_and_Gromit_Theme_Loop_4.mp3" loop></audio>
+
+<div class="tetrisButtonContainer">
+  <image id="TETRISBUTTON" src="images/tetrisImage.jpg"></image>
+</div>
+
+<div class="TETRISCONTAINER">
+
+  <!-- Display Score -->
+  <h3>Score: <span id="score">0</span></h3>
+  <button id="startButton" type="button" name="button"> Start/pause</button>
+  <!-- make grid 20 squares tall 10 squares wide -->
+  <div id="container">
+    <div id="tetrisGrid" class="tetrisGridClass">
+    </div>
+
+    <div id="nextTetriminoDisplay">
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
