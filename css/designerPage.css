@@ -1,0 +1,30 @@
+body {
+  margin: 0px;
+}
+h1 {
+  margin-top: 0px;
+}
+div {
+  border-radius: 50%;
+}
+.topContainer{
+  background-color: #ffdada;
+  height: 200px;
+  width: 200px;
+  border: solid 10px #dbf6e9;
+  padding: 20px;
+}
+.middleContainer{
+  background-color: #9ddfd3;
+  height: 200px;
+  width: 200px;
+  margin-left: 260px;
+  border: solid 20px #ffdada;
+}
+.bottomContainer{
+  background-color: #dbf6e9;
+  height: 200px;
+  width: 200px;
+  margin-left: 500px;
+  border: solid 10px #9ddfd3;
+}
